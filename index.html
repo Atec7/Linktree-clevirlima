@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Clevir Moda Íntima - Links</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #8B0000, #3a0808);
+      color: white;
+      text-align: center;
+      padding: 40px 20px;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .logo {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      border: 3px solid white;
+      margin-bottom: 20px;
+      z-index: 10;
+    }
+
+    h1 {
+      font-size: 24px;
+      margin-bottom: 10px;
+      z-index: 10;
+      position: relative;
+    }
+
+    .linktree-button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      background: white;
+      color: #8B0000;
+      padding: 12px;
+      margin: 10px auto;
+      width: 80%;
+      max-width: 400px;
+      border-radius: 30px;
+      font-weight: bold;
+      text-decoration: none;
+      transition: 0.3s;
+      z-index: 10;
+      position: relative;
+      opacity: 0;
+      animation: fadeInUp 0.8s ease forwards;
+    }
+
+    .linktree-button:nth-of-type(1) { animation-delay: 0.2s; }
+    .linktree-button:nth-of-type(2) { animation-delay: 0.4s; }
+    .linktree-button:nth-of-type(3) { animation-delay: 0.6s; }
+    .linktree-button:nth-of-type(4) { animation-delay: 0.8s; }
+    .linktree-button:nth-of-type(5) { animation-delay: 1s; }
+
+    .linktree-button:hover {
+      background: gold;
+      color: #3a0808;
+    }
+
+    .linktree-button i {
+      font-size: 18px;
+    }
+
+    @keyframes fadeInUp {
+      from {
+        transform: translateY(20px);
+        opacity: 0;
+      }
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+
+    /* Pimentinhas caindo */
+    .pepper {
+      position: fixed;
+      top: 0;
+      font-size: 24px;
+      animation: fallPepper linear infinite;
+      z-index: 1;
+      opacity: 0.8;
+    }
+
+    @keyframes fallPepper {
+      0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(100vh) rotate(360deg);
+        opacity: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <img src="img/logo3.jpg" alt="Logo" class="logo">
+  <h1>Clevir Moda Íntima</h1>
+  <p>Encontre todos os nossos canais:</p>
+
+  <a class="linktree-button" href="https://clevirmodaintima.com.br" target="_blank">
+    <i class="fas fa-globe"></i> Site Oficial
+  </a>
+  <a class="linktree-button" href="https://wa.me/5599999999999" target="_blank">
+    <i class="fab fa-whatsapp"></i> WhatsApp
+  </a>
+  <a class="linktree-button" href="https://instagram.com/seuperfil" target="_blank">
+    <i class="fab fa-instagram"></i> Instagram
+  </a>
+  <a class="linktree-button" href="https://chat.whatsapp.com/CP4GFJeCLJQA1pdOjATJuq" target="_blank">
+    <i class="fas fa-users"></i> Grupo VIP
+  </a>
+  <a class="linktree-button" href="catalogo.pdf" target="_blank">
+    <i class="fas fa-file-pdf"></i> Baixar Catálogo
+  </a>
+
+  <!-- Pimentinhas caindo com emoji -->
+  <script>
+    function createPepper() {
+      const pepper = document.createElement("div");
+      pepper.className = "pepper";
+      pepper.innerText = "🌶️";
+      pepper.style.left = Math.random() * 100 + "vw";
+      pepper.style.animationDuration = (3 + Math.random() * 2) + "s";
+      document.body.appendChild(pepper);
+      setTimeout(() => pepper.remove(), 5000);
+    }
+    setInterval(createPepper, 300);
+  </script>
+
+</body>
+<footer>www.clevirlima.com.br</footer>
+</html>
