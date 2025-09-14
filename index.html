@@ -3,14 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>🔥Clevir Lima🔥 - Links</title>
+  <title>✨Clevir Lima✨ - Links</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <style>
     body {
       font-family: 'Poppins', sans-serif;
-      background: linear-gradient(135deg, #8B0000, #3a0808);
-      color: white;
+      background: #fff6f2;
+      color: #ff69b4;
       text-align: center;
       padding: 40px 20px;
       overflow: hidden;
@@ -21,7 +21,7 @@
       width: 120px;
       height: 120px;
       border-radius: 50%;
-      border: 3px solid white;
+      border: 3px solid #ff69b4;
       margin-bottom: 20px;
       z-index: 10;
     }
@@ -31,6 +31,11 @@
       margin-bottom: 10px;
       z-index: 10;
       position: relative;
+      color: #ff69b4;
+    }
+
+    p {
+      color: #ff69b4;
     }
 
     .linktree-button {
@@ -38,8 +43,8 @@
       align-items: center;
       justify-content: center;
       gap: 10px;
-      background: white;
-      color: #8B0000;
+      background: #ff69b4;
+      color: white;
       padding: 12px;
       margin: 10px auto;
       width: 80%;
@@ -61,8 +66,9 @@
     .linktree-button:nth-of-type(5) { animation-delay: 1s; }
 
     .linktree-button:hover {
-      background: gold;
-      color: #3a0808;
+      background: white;
+      color: #ff69b4;
+      border: 2px solid #ff69b4;
     }
 
     .linktree-button i {
@@ -80,17 +86,18 @@
       }
     }
 
-    /* Pimentinhas caindo */
-    .pepper {
+    /* Estrelinhas caindo */
+    .star {
       position: fixed;
       top: 0;
-      font-size: 24px;
-      animation: fallPepper linear infinite;
+      font-size: 20px;
+      animation: fallStar linear infinite;
       z-index: 1;
       opacity: 0.8;
+      color: #ff69b4;
     }
 
-    @keyframes fallPepper {
+    @keyframes fallStar {
       0% {
         transform: translateY(0) rotate(0deg);
         opacity: 1;
@@ -99,6 +106,12 @@
         transform: translateY(100vh) rotate(360deg);
         opacity: 0;
       }
+    }
+
+    footer {
+      margin-top: 20px;
+      font-size: 14px;
+      color: #ff69b4;
     }
   </style>
 </head>
@@ -123,19 +136,20 @@
   <a class="linktree-button" href="https://atec7.github.io/www.clevirlima.com.br/" target="_blank">
     <i class="fas fa-file-pdf"></i> Baixar Catálogo
   </a>
-<footer>www.clevirlima.com.br</footer>
+
+  <footer>www.clevirlima.com.br</footer>
  
   <script>
-    function createPepper() {
-      const pepper = document.createElement("div");
-      pepper.className = "pepper";
-      pepper.innerText = "🌶️";
-      pepper.style.left = Math.random() * 100 + "vw";
-      pepper.style.animationDuration = (3 + Math.random() * 2) + "s";
-      document.body.appendChild(pepper);
-      setTimeout(() => pepper.remove(), 5000);
+    function createStar() {
+      const star = document.createElement("div");
+      star.className = "star";
+      star.innerText = "✨";
+      star.style.left = Math.random() * 100 + "vw";
+      star.style.animationDuration = (3 + Math.random() * 2) + "s";
+      document.body.appendChild(star);
+      setTimeout(() => star.remove(), 5000);
     }
-    setInterval(createPepper, 300);
+    setInterval(createStar, 400);
   </script>
 
 </body>
